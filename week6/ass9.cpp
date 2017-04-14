@@ -5,12 +5,12 @@ using namespace std;
 bool permmit(char *, int [][2]);
 void num_minus(char *);
 int main() {
+	char number[501];
+	int key[10][2] = {{3, 1}, {0, 0}, {0, 1}, {0, 2}, {1, 0}, {1, 1}, {1, 2}, {2, 0}, {2, 1}, {2, 2}};
 	int n;
 	cin >> n;
 	while(n--) {
-		char number[501];
 		cin >> number;
-		int key[10][2] = {{3, 1}, {0, 0}, {0, 1}, {0, 2}, {1, 0}, {1, 1}, {1, 2}, {2, 0}, {2, 1}, {2, 2}};
 		char * num_end = number + strlen(number) - 1;
 		while(!permmit(number, key))
 			num_minus(num_end);
